@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/39fc965028.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    
+    
+    <title>slice and dice</title>
+</head>
+<body>
+    <div class="slider">
+
+        <div  class="header">
+            <div class="logo">
+                Alecto
+            </div>
+            <nav >
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Work</a>
+                <a href="">Service</a>
+                <a href="">Blog</a>
+            </nav>
+        </div>
+        <i class="fas fa-chevron-right fa-8x" onclick="moveRight()"></i>
+        <i class="fas fa-chevron-left  fa-8x" onclick=" moveLeft()"></i>
+
+        
+       
+    
+        <div class="slides">
+            <input type="radio" name="btn-radio" id="r1">
+            <input type="radio" name="btn-radio" id="r2">
+            <input type="radio" name="btn-radio" id="r3">
+            <input type="radio" name="btn-radio" id="r4">
+
+            <div class="slide first">
+                <div class="banner">
+                    <h1><span class="bold">Alecto</span> is new PSD Template</h1>
+                    <h3>eadable content of a page when looking
+            
+                    </h3>
+                    <button class="butt">click</button>
+                </div>
+                <img src="assets/first.jpg" alt="">
+            </div>
+            <div class="slide">
+                <div class="banner">
+                    <h1><span>Alecto</span> is new PSD Template</h1>
+                    <h3>slajjdlajdljasldjasldjsaljasljsklaja</h3>
+                    <button>click</button>
+                </div>
+                <img src="assets/second.jpg" alt="">
+            </div>
+            <div class="slide">
+                <div class="banner">
+                    <h1><span>Alecto</span> is new PSD Template</h1>
+                    <h3>slajjdlajdljasldjasldjsaljasljsklaja</h3>
+                    <button>click</button>
+                </div>
+                <img src="assets/third.jpg" alt="">
+            </div>
+            <div class=" slide">
+                <div class="banner">
+                    <h1><span>Alecto</span> is new PSD Template</h1>
+                    <h3>slajjdlajdljasldjasldjsaljasljsklaja</h3>
+                    <button>click</button>
+                </div>
+                <img src="assets/fourth.jpg" alt="">
+            </div>
+
+            
+
+            <!-- <div class="auto-navigation">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div> -->
+
+            
+        </div>
+        
+
+        <div class="navigation-manual">
+            <label for="r1" class="manual-btn" id="m1"></label>
+            <label for="r2" class="manual-btn" id="m2"></label>
+            <label for="r3" class="manual-btn" id="m3"></label>
+            <label for="r4" class="manual-btn" id="m1"></label>
+        </div>
+        
+
+    </div>
+    <div class="about">
+        <h1>About us</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too</p>
+        <div class="cardsHolder">
+            <div class="card">
+                <div class="icon" id="icon1">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon" >
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon" id="icon3">
+                    <i class="fas fa-fan"></i>
+                </div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="card">
+                <div class="icon" >
+                    <i class="far fa-caret-square-up"></i>
+                </div>
+                <h2>Lorem Ipsum</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+
+        <div class="buttonHolder">
+            <button >Learn more</button>
+        </div>
+    </div>
+    <div class="work">
+        <div id="photo">
+            <img src="assets/aparat.png" alt="">
+        </div>
+        <div class="lorem">
+            
+            <div><h1>Lorem Ipsum</h1>
+           <p>It is a long established fact that a reader will be distracted by the br 
+            readable content of a page when looking at its layout. The point of
+             
+         
+        </div>
+        <div> <button>Click</button></div>
+       
+    </div>
+    </div>
+
+    <div class="work">
+       
+            <div class="lorem" id="right">
+            
+                <div>
+                    <h1>Lorem Ipsum</h1>
+               <p>It is a long established fact that a reader will be distracted by the br 
+                readable content of a page when looking at its layout. The point of
+                
+             
+            </div>
+            <div> <button>Click</button></div>
+       
+
+        
+    </div>
+    <div id="photo">
+        <img src="assets/laptop.png" alt="">
+    </div>
+    </div>
+    
+    
+</body>
+<script type="text/javascript">
+    var counter = 1;
+
+    setInterval(function(){
+       var slide =  document.getElementById('r' + counter);
+       slide.checked = true;
+
+       
+
+        counter++;
+
+        if(counter > 4){
+            counter = 1;
+        }
+    },5000);
+
+    var arrowCounter = 1;
+    var movingBlock = document.getElementsByClassName('first');
+    var manualBtn = document.getElementsByClassName('manual-btn');
+    
+
+   
+    function moveRight(){
+        
+        switch(arrowCounter) {
+            case 1:
+                movingBlock[0].style.marginLeft = "0";
+                arrowCounter++;
+                break;
+            case 2:
+                movingBlock[0].style.marginLeft = "-25%";
+                
+                arrowCounter++;
+                break;
+            case 3:
+                movingBlock[0].style.marginLeft = "-50%";
+                arrowCounter++;
+                break;
+            case 4:
+                movingBlock[0].style.marginLeft = "-75%";
+                arrowCounter++;
+                break;
+        }
+
+        if(arrowCounter==5){
+            arrowCounter=1;
+        }
+
+    }
+
+    function moveLeft(){
+        
+        switch(arrowCounter) {
+            case 1:
+                movingBlock[0].style.marginLeft = "-75%";
+                arrowCounter--;
+                break;
+            case 2:
+                movingBlock[0].style.marginLeft = "0";
+                arrowCounter--;
+                break;
+            case 3:
+                movingBlock[0].style.marginLeft = "-25%";
+                arrowCounter--;
+                break;
+            case 4:
+                movingBlock[0].style.marginLeft = "-50%";
+                arrowCounter--;
+                break;
+        }
+
+        if(arrowCounter==0){
+            arrowCounter=4;
+        }
+    }
+
+        
+</script>
+</html>
